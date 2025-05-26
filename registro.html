@@ -60,7 +60,6 @@
         password: form.password.value.trim()
       };
 
-      // Guardar en localStorage (simulación)
       let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
       usuarios.push(usuario);
       localStorage.setItem('usuarios', JSON.stringify(usuarios));
@@ -73,3 +72,4 @@
   </script>
 </body>
 </html>
+
