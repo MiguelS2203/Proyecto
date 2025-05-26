@@ -24,6 +24,7 @@ html, body {
   background-position: center center;
   background-size: cover;
   color: var(--color-texto);
+  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
