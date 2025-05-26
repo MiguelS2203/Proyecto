@@ -1,83 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mundo sobre Ruedas - Acerca</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="imagenes/logoPrincipal.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="header"></div>
 
-          <!DOCTYPE html>
-          <html lang="es">
-            <head>
-              <meta charset="UTF-8" />
-              <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-              <title>Mundo sobre Ruedas</title>
-              <link rel="stylesheet" href="styles.css" />
-              <link rel="icon" href="imagenes/logoPrincipal.png" type="image/x-icon">
-          
-          
-            </head>
-            <body>
-              <div id="header"></div>
-          
-              <section id="contenido">
-                <article>
+    <section id="contenido">
+      <div class="contenedor-de-borde">
+        <article>
+          <h2>Historia de los Autos</h2>
+          <p>Los autos han sido una de las invenciones más revolucionarias de la era moderna. Desde los primeros
+            modelos a finales del siglo XIX hasta los vehículos eléctricos y autónomos de hoy en día, la industria
+            automotriz ha evolucionado de manera sorprendente. Los avances en tecnología, diseño y eficiencia
+            energética han transformado por completo la forma en que nos movemos y experimentamos el mundo a nuestro
+            alrededor.</p>
 
-                  
-            <h2>Historia de los Autos</h2>
-            <p>Los autos han sido una de las invenciones más revolucionarias de la era moderna. Desde los primeros
-                modelos a finales del siglo XIX hasta los vehículos eléctricos y autónomos de hoy en día, la industria
-                automotriz ha evolucionado de manera sorprendente. Los avances en tecnología, diseño y eficiencia
-                energética han transformado por completo la forma en que nos movemos y experimentamos el mundo a nuestro
-                alrededor.</p>
+          <img src="imagenes/historia.jpg" alt="Historia" />
 
-                <img src="imagenes/historia.jpg" alt="Historia" />
+          <h2>Tipos de Autos</h2>
+          <p>Dentro del amplio mundo de los autos, existen diversas categorías y segmentos que satisfacen las
+            necesidades y preferencias de los conductores. Desde los compactos y eficientes citadinos, pasando por
+            los todoterrenos robustos y los deportivos emocionantes, hasta llegar a los lujosos y elegantes
+            vehículos de alta gama. Cada tipo de auto tiene sus propias características y ofrece una experiencia de
+            manejo única.</p>
 
-            <h2>Tipos de Autos</h2>
-            <p>Dentro del amplio mundo de los autos, existen diversas categorías y segmentos que satisfacen las
-                necesidades y preferencias de los conductores. Desde los compactos y eficientes citadinos, pasando por
-                los todoterrenos robustos y los deportivos emocionantes, hasta llegar a los lujosos y elegantes
-                vehículos de alta gama. Cada tipo de auto tiene sus propias características y ofrece una experiencia de
-                manejo única.</p>
+          <img src="imagenes/tipos.jpg" alt="Tipos" />
 
-                <img src="imagenes/tipos.jpg" alt="Tipos" />
+          <h2>Innovación y Tecnología</h2>
+          <p>La industria automotriz está a la vanguardia de la innovación tecnológica. Sistemas de asistencia al
+            conductor, motores más eficientes, conectividad avanzada y la creciente incorporación de la conducción
+            autónoma son solo algunas de las tendencias que están transformando la forma en que interactuamos con
+            nuestros vehículos. Estas innovaciones no solo mejoran la seguridad y el confort, sino que también
+            contribuyen a un futuro más sostenible.</p>
 
-            <h2>Innovación y Tecnología</h2>
-            <p>La industria automotriz está a la vanguardia de la innovación tecnológica. Sistemas de asistencia al
-                conductor, motores más eficientes, conectividad avanzada y la creciente incorporación de la conducción
-                autónoma son solo algunas de las tendencias que están transformando la forma en que interactuamos con
-                nuestros vehículos. Estas innovaciones no solo mejoran la seguridad y el confort, sino que también
-                contribuyen a un futuro más sostenible.</p>
+          <img src="imagenes/innovacion.jpg" alt="Innovación" />
 
-                <img src="imagenes/innovacion.jpg" alt="Innovación" />
+          <h2>Experiencia de Conducción</h2>
+          <p>Más allá de ser simples medios de transporte, los autos ofrecen una experiencia de conducción única y
+            emocionante. Desde el placer de recorrer sinuosas carreteras hasta la satisfacción de dominar un
+            vehículo deportivo, cada modelo y marca tiene su propia personalidad y carácter. Los entusiastas del
+            mundo automotriz disfrutan de la emoción, la adrenalina y la conexión que se establece entre el
+            conductor y su vehículo.</p>
 
-            <h2>Experiencia de Conducción</h2>
-            <p>Más allá de ser simples medios de transporte, los autos ofrecen una experiencia de conducción única y
-                emocionante. Desde el placer de recorrer sinuosas carreteras hasta la satisfacción de dominar un
-                vehículo deportivo, cada modelo y marca tiene su propia personalidad y carácter. Los entusiastas del
-                mundo automotriz disfrutan de la emoción, la adrenalina y la conexión que se establece entre el
-                conductor y su vehículo.</p>
+          <img src="imagenes/experienci.jpg" alt="Experiencia" />
+        </article>
+      </div>
+    </section>
 
-                <img src="imagenes/experienci.jpg" alt="Experiencia" />
+    <div id="footer"></div>
 
-            
-                 
+    <script>
+      fetch('header.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('header').innerHTML = data);
 
+      fetch('footer.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+  </body>
+</html>
 
-
-
-                </article>
-              </section>
-            <div id="footer"></div>
-              
-            </body>
-          
-            <script>
-              //contenido Estatico********************
-              // Incluir header
-              fetch('header.html')
-                .then(res => res.text())
-                .then(data => document.getElementById('header').innerHTML = data);
-          
-              // Incluir footer
-              fetch('footer.html')
-                .then(res => res.text())
-                .then(data => document.getElementById('footer').innerHTML = data);
-           
-          
-            </script>
-          
-          </html>
