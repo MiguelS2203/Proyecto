@@ -7,6 +7,10 @@
     <link rel="icon" href="imagenes/logoPrincipal.png" type="image/x-icon" />
     <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="styles.css" />
+    <!-- Fuente personalizada, cambia aquí si quieres otra -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   </head>
   <body>
     <div id="header"></div>
@@ -16,7 +20,6 @@
         <h2>
           Noticias Destacadas
           <span class="icono-svg">
-            <!-- Ejemplo SVG decorativo -->
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 19h-6a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v6"/></svg>
           </span>
         </h2>
@@ -32,12 +35,10 @@
     <div id="footer"></div>
 
     <script>
-      // Incluir header
       fetch('header.html')
         .then(res => res.text())
         .then(data => document.getElementById('header').innerHTML = data);
 
-      // Incluir footer
       fetch('footer.html')
         .then(res => res.text())
         .then(data => document.getElementById('footer').innerHTML = data);
