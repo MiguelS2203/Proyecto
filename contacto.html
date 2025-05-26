@@ -11,26 +11,28 @@
     <div id="header"></div>
 
     <section>
-      <form class="form">
-        <fieldset>
-          <h2 class="form-titulo">Contáctanos</h2>
-          <div>
-            <label>Nombre</label>
-            <input type="text" placeholder="Tu nombre" />
-          </div>
-          <div>
-            <label>Correo</label>
-            <input type="email" placeholder="Correo electrónico" />
-          </div>
-          <div>
-            <label>Mensaje</label>
-            <textarea placeholder="Escribe tu mensaje aquí"></textarea>
-          </div>
-          <div>
-            <input class="boton" type="submit" value="Enviar" />
-          </div>
-        </fieldset>
-      </form>
+      <div class="contenedor-de-borde">
+        <form class="form">
+          <fieldset>
+            <h2 class="form-titulo">Contáctanos</h2>
+            <div>
+              <label>Nombre</label>
+              <input type="text" placeholder="Tu nombre" />
+            </div>
+            <div>
+              <label>Correo</label>
+              <input type="email" placeholder="Correo electrónico" />
+            </div>
+            <div>
+              <label>Mensaje</label>
+              <textarea placeholder="Escribe tu mensaje aquí"></textarea>
+            </div>
+            <div>
+              <input class="boton" type="submit" value="Enviar" />
+            </div>
+          </fieldset>
+        </form>
+      </div>
     </section>
 
     <div id="footer"></div>
@@ -45,10 +47,4 @@
         .then(data => document.getElementById('footer').innerHTML = data);
     </script>
   </body>
-</html>
-
- 
-
-  </script>
-
 </html>
