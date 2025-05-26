@@ -19,7 +19,7 @@ html, body {
   height: 100%;
   margin: 0;
   font-family: 'Roboto', Arial, sans-serif;
-  background-image: url('imagenes/Autoacelerandofondo'); /* ruta correcta a tu imagen */
+  background-image: url('imagenes/Autoacelerandofondo.webp'); /* ruta correcta a tu imagen */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
