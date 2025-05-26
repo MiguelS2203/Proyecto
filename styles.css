@@ -31,17 +31,13 @@ html, body {
 }
 
 #contenido {
-  flex: 1 0 auto;
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 30px 15px;
-  background-image: url('imagenes/Autoacelerandofondo.webp'); /* Cambia por la ruta correcta */
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-color: var(--color-blanco); /* color de respaldo */
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+flex: 1 0 auto;
+max-width: 900px;
+margin: 30px auto;
+padding: 30px 15px;
+background: var(--color-blanco);
+border-radius: 12px;
+box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
 /* Centrar imágenes en contenido */
