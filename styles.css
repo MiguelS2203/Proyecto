@@ -23,7 +23,6 @@ html, body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-attachment: fixed; /* opcional, para que la imagen no se mueva al hacer scroll */
   color: var(--color-texto);
   filter: blur(5px);
   display: flex;
