@@ -27,7 +27,7 @@ html, body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* Se elimina filter: blur para no desenfocar el contenido */
+
 }
 
 /* Header y Footer */
