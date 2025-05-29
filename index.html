@@ -12,7 +12,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <div id="header"></div>
+    <header>
+        <div class="contenedor-de-borde">
+            <img src="imagenes/logoPrincipal.png" alt="Logo Mundo sobre Ruedas" class="logo" />
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="noticias.html">Noticias</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <section id="contenido">
         <div class="contenedor-de-borde">
@@ -20,6 +31,7 @@
                 <h2>Noticias Destacadas</h2>
                 <p>Descubre algunos de los Autos más populares del mundo.</p>
                 <div class="gallery">
+                   ഗ
                     <img src="imagenes/auto1.jpg" alt="Auto 1" />
                     <img src="imagenes/auto2.jpg" alt="Auto 2" />
                     <img src="imagenes/auto3.jpg" alt="Auto 3" />
@@ -28,16 +40,17 @@
         </div>
     </section>
 
-    <div id="footer"></div>
-
-    <script>
-        fetch('header.html')
-            .then(res => res.text())
-            .then(data => document.getElementById('header').innerHTML = data);
-
-        fetch('footer.html')
-            .then(res => res.text())
-            .then(data => document.getElementById('footer').innerHTML = data);
-    </script>
+    <footer>
+        <div class="contenedor-de-borde">
+            <p>&copy; 2025 Mundo sobre Ruedas. Todos los derechos reservados.</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="noticias.html">Noticias</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>
