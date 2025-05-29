@@ -32,44 +32,6 @@
 
   <div id="footer"></div>
 
-  <script>
-    fetch('header.html')
-      .then(res => res.text())
-      .then(data => document.getElementById('header').innerHTML = data);
-
-    fetch('footer.html')
-      .then(res => res.text())
-      .then(data => document.getElementById('footer').innerHTML = data);
-
-    const form = document.getElementById('formRegistro');
-    const mensaje = document.getElementById('mensaje');
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      if (!form.checkValidity()) {
-        mensaje.textContent = 'Por favor, completa todos los campos correctamente.';
-        mensaje.style.color = 'red';
-        return;
-      }
-
-      const usuario = {
-        nombre: form.nombre.value.trim(),
-        email: form.email.value.trim(),
-        usuario: form.usuario.value.trim(),
-        password: form.password.value.trim()
-      };
-
-      let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-      usuarios.push(usuario);
-      localStorage.setItem('usuarios', JSON.stringify(usuarios));
-
-      mensaje.textContent = 'Registro exitoso. ¡Bienvenido, ' + usuario.nombre + '!';
-      mensaje.style.color = 'green';
-
-      form.reset();
-    });
-  </script>
 </body>
 </html>
 
