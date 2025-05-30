@@ -1,4 +1,4 @@
-/* Variables de color */
+/* Variables de color definidas para reutilizar */
 :root {
   --color-primario: #8a1919;
   --color-secundario: #555;
@@ -7,30 +7,28 @@
   --color-fondo: #f5f5f5;
 }
 
-/* Reset box-sizing */
-*,
-*::before,
-*::after {
+/* Aplica box-sizing a todos los elementos para que padding y border no sumen al tamaño total */
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* Body y layout para footer fijo */
+/* Estilos globales del body y configuración para que el footer quede fijo abajo */
 html, body {
   height: 100%;
   margin: 0;
   font-family: 'Roboto', Arial, sans-serif;
-  background-image: url('imagenes/Autoacelerandofondo.webp');
+  background-image: url('imagenes/Autoacelerandofondo.webp'); /* Imagen de fondo */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  background-attachment: fixed; /* Fondo fijo al hacer scroll */
   color: var(--color-texto);
-  background-attachment: fixed;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* Header */
+/* Encabezado de la página */
 header {
   background-color: var(--color-primario);
   color: var(--color-blanco);
@@ -38,6 +36,7 @@ header {
   padding: 15px 10px;
 }
 
+/* Contenedor del encabezado con logo y título */
 .encabezadoPrincipal {
   display: flex;
   align-items: center;
@@ -46,11 +45,13 @@ header {
   flex-wrap: nowrap;
 }
 
+/* Título del encabezado */
 .tituloPrincipal {
   margin: 0;
   font-size: 2.5rem;
 }
 
+/* Tamaño del logo */
 .logoPrincipal {
   width: 120px;
   height: auto;
@@ -67,12 +68,14 @@ header {
   flex-wrap: nowrap;
 }
 
+/* Elementos de la lista de navegación */
 .nav-principal li {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
+/* Enlaces del menú de navegación */
 .nav-principal a {
   color: var(--color-blanco);
   text-decoration: none;
@@ -85,11 +88,13 @@ header {
   align-items: center;
 }
 
+/* Efecto hover para enlaces del menú */
 .nav-principal a:hover {
   background-color: #6f1212;
   box-shadow: 0 4px 8px rgba(138, 25, 25, 0.7);
 }
 
+/* Tamaño para los íconos SVG del menú */
 .icono-svg {
   width: 20px;
   height: 20px;
@@ -99,7 +104,7 @@ header {
   flex-shrink: 0;
 }
 
-/* Footer */
+/* Pie de página */
 footer {
   flex-shrink: 0;
   background-color: var(--color-primario);
@@ -109,7 +114,7 @@ footer {
   font-size: 14px;
 }
 
-/* Contenedor común para borde, sombra y padding */
+/* Contenedor con sombra, borde y relleno general */
 .contenedor-de-borde {
   background-color: var(--color-blanco);
   padding: 25px 30px;
@@ -119,7 +124,7 @@ footer {
   margin: 30px auto;
 }
 
-/* Ajuste para #contenido para que no tenga padding ni borde */
+/* Área principal del contenido sin sombra ni fondo */
 #contenido {
   flex: 1 0 auto;
   max-width: 900px;
@@ -129,7 +134,7 @@ footer {
   box-shadow: none;
 }
 
-/* Evitar bordes y sombras duplicadas en elementos internos */
+/* Evita duplicar bordes o estilos en los elementos internos */
 #contenido article,
 .form,
 .registro-contenedor,
@@ -142,7 +147,7 @@ footer {
   margin: 0 !important;
 }
 
-/* Centrar imágenes en contenido */
+/* Centra las imágenes del contenido y les da sombra */
 #contenido img {
   display: block;
   margin: 20px auto;
@@ -152,7 +157,7 @@ footer {
   box-shadow: 0 4px 8px rgba(138, 25, 25, 0.3);
 }
 
-/* Formularios */
+/* Estilo del título de los formularios */
 .form-titulo {
   font-size: 1.8rem;
   font-weight: bold;
@@ -161,6 +166,7 @@ footer {
   color: var(--color-primario);
 }
 
+/* Estilos de etiquetas (labels) de los formularios */
 .form-registro label,
 .form label {
   display: block;
@@ -169,6 +175,7 @@ footer {
   color: var(--color-primario);
 }
 
+/* Campos de entrada y área de texto de los formularios */
 .form-registro input,
 .form input,
 .form-registro textarea,
@@ -182,6 +189,7 @@ footer {
   outline: none;
 }
 
+/* Efecto visual cuando el campo tiene el foco */
 .form-registro input:focus,
 .form input:focus,
 .form-registro textarea:focus,
@@ -190,7 +198,7 @@ footer {
   box-shadow: 0 0 5px var(--color-primario);
 }
 
-/* Botones */
+/* Botón general */
 .boton {
   background-color: var(--color-primario);
   color: var(--color-blanco);
@@ -203,31 +211,37 @@ footer {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Efecto hover del botón */
 .boton:hover {
   background-color: var(--color-secundario);
   box-shadow: 0 6px 12px rgba(85, 85, 85, 0.7);
 }
 
-/* Responsive */
+/* Estilos adaptables a pantallas pequeñas (responsive) */
 @media (max-width: 768px) {
+  /* Navegación en columna en vez de fila */
   .nav-principal ul {
     flex-direction: column;
     gap: 12px;
     align-items: center;
   }
 
+  /* El encabezado también se acomoda en columna */
   .encabezadoPrincipal {
     flex-direction: column;
     gap: 10px;
   }
 
+  /* La galería de imágenes se acomoda verticalmente */
   .gallery {
     flex-direction: column;
   }
 
+  /* Imágenes de la galería ocupan todo el ancho del contenedor y tienen margen inferior */
   .gallery img {
     width: 100%;
     margin-bottom: 15px;
   }
 }
+
 
